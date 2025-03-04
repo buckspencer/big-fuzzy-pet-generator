@@ -1,0 +1,9 @@
+torch==2.1.0
+torchvision==0.16.0
+Pillow==10.2.0
+numpy==1.24.3
+pydantic==2.5.3
+transformers==4.36.2
+accelerate==0.25.0
+safetensors==0.4.1
+diffusers==0.25.0 
