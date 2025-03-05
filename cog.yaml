@@ -1,17 +1,24 @@
 build:
   gpu: true
-  python_version: "3.10"
+  python_version: "3.11"
   system_packages:
     - "libgl1-mesa-glx"
     - "libglib2.0-0"
+    - "git"
   python_packages:
-    - "torch==2.1.0"
-    - "transformers==4.36.2"
-    - "accelerate==0.25.0"
-    - "safetensors==0.4.1"
-    - "diffusers==0.25.0"
-    - "Pillow==10.2.0"
+    - "torch==2.0.1"
+    - "transformers==4.30.2"
+    - "diffusers==0.19.3"
+    - "accelerate==0.21.0"
+    - "safetensors==0.3.1"
+    - "Pillow==9.5.0"
     - "numpy==1.24.3"
-    - "pydantic==2.5.3"
+    - "tqdm==4.65.0"
+    - "huggingface_hub==0.16.4"
+  run:
+    - "mkdir -p /root/.cache/huggingface"
+    - "mkdir -p /root/.cache/torch"
+    - "mkdir -p /root/.cache/diffusers"
 
+image: "r8.im/buckspencer/big-fuzzy-pet-generator"
 predict: "predict.py:Predictor" 
